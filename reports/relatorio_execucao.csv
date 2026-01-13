@@ -1,51 +1,258 @@
 id,status,tentativas,duracao_seg,erro
-1,COMPLETO,1,0.655215,
-2,COMPLETO,1,0.73621,
-3,COMPLETO,1,0.8842,
-4,COMPLETO,1,0.677206,
-5,COMPLETO,1,0.82515,
-6,COMPLETO,1,0.64019,
-7,COMPLETO,1,0.737348,
-8,COMPLETO,1,0.654192,
-9,COMPLETO,1,0.675745,
-10,COMPLETO,1,0.810037,
-11,COMPLETO,1,1.316729,
-12,COMPLETO,1,0.681698,
-13,COMPLETO,1,0.645699,
-14,COMPLETO,1,0.525808,
-15,COMPLETO,1,0.818723,
-16,COMPLETO,1,0.5837,
-17,COMPLETO,1,0.249453,
-18,COMPLETO,1,0.208594,
-19,COMPLETO,1,0.236959,
-20,COMPLETO,1,0.196456,
-21,COMPLETO,1,0.201961,
-22,COMPLETO,1,0.208423,
-23,COMPLETO,1,0.261821,
-24,COMPLETO,1,0.316953,
-25,COMPLETO,1,0.209046,
-26,COMPLETO,1,0.325505,
-27,COMPLETO,1,0.343909,
-28,COMPLETO,1,0.338898,
-29,COMPLETO,1,0.324547,
-30,COMPLETO,1,0.290542,
-31,COMPLETO,1,0.268026,
-32,COMPLETO,1,0.318029,
-33,COMPLETO,1,0.272023,
-34,COMPLETO,1,0.489026,
-35,COMPLETO,1,0.278026,
-36,COMPLETO,1,0.280004,
-37,COMPLETO,1,0.558007,
-38,COMPLETO,1,0.244003,
-39,COMPLETO,1,0.232003,
-40,COMPLETO,1,0.282007,
-41,COMPLETO,1,0.237003,
-42,COMPLETO,1,0.225003,
-43,COMPLETO,1,0.269005,
-44,COMPLETO,1,0.303006,
-45,COMPLETO,1,0.307006,
-46,COMPLETO,1,0.254006,
-47,COMPLETO,1,0.233007,
-48,COMPLETO,1,0.241005,
-49,COMPLETO,1,0.235005,
-50,COMPLETO,1,0.523979,
+1,COMPLETO,1,1.055949,
+2,COMPLETO,1,0.821702,
+3,COMPLETO,1,1.247923,
+4,COMPLETO,1,1.013105,
+5,COMPLETO,1,1.497225,
+6,COMPLETO,1,1.263889,
+7,COMPLETO,1,1.277441,
+8,COMPLETO,1,1.108983,
+9,COMPLETO,1,0.840122,
+10,COMPLETO,1,1.034702,
+11,COMPLETO,1,0.658493,
+12,COMPLETO,1,0.788503,
+13,COMPLETO,1,0.768016,
+14,COMPLETO,1,0.651815,
+15,COMPLETO,1,0.854323,
+16,COMPLETO,1,0.985284,
+17,COMPLETO,1,0.255185,
+18,COMPLETO,1,0.628847,
+19,COMPLETO,1,0.294172,
+20,EXCECAO,3,0.0,"Traceback (most recent call last):
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\core\process.py"", line 21, in processar_item
+    dados = executar_automacao(item.payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\run.py"", line 16, in executar_automacao
+    return analyze_ticker(path, ticket, ANO, KE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 190, in analyze_ticker
+    valor_intrinseco = valuation_via_roe(
+                       ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 79, in valuation_via_roe
+    lpa_atual = lpa_series.dropna().iloc[0]
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1153, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1714, in _getitem_axis
+    self._validate_integer(key, axis)
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1647, in _validate_integer
+    raise IndexError(""single positional indexer is out-of-bounds"")
+IndexError: single positional indexer is out-of-bounds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\core\process.py"", line 21, in processar_item
+    dados = executar_automacao(item.payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\run.py"", line 16, in executar_automacao
+    return analyze_ticker(path, ticket, ANO, KE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 190, in analyze_ticker
+    valor_intrinseco = valuation_via_roe(
+                       ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 79, in valuation_via_roe
+    lpa_atual = lpa_series.dropna().iloc[0]
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1153, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1714, in _getitem_axis
+    self._validate_integer(key, axis)
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1647, in _validate_integer
+    raise IndexError(""single positional indexer is out-of-bounds"")
+IndexError: single positional indexer is out-of-bounds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\core\process.py"", line 21, in processar_item
+    dados = executar_automacao(item.payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\run.py"", line 16, in executar_automacao
+    return analyze_ticker(path, ticket, ANO, KE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 190, in analyze_ticker
+    valor_intrinseco = valuation_via_roe(
+                       ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 79, in valuation_via_roe
+    lpa_atual = lpa_series.dropna().iloc[0]
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1153, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1714, in _getitem_axis
+    self._validate_integer(key, axis)
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1647, in _validate_integer
+    raise IndexError(""single positional indexer is out-of-bounds"")
+IndexError: single positional indexer is out-of-bounds
+"
+21,COMPLETO,1,0.266428,
+22,COMPLETO,1,0.282663,
+23,COMPLETO,1,0.315668,
+24,COMPLETO,1,0.295367,
+25,COMPLETO,1,0.236367,
+26,COMPLETO,1,0.451364,
+27,COMPLETO,1,0.325035,
+28,COMPLETO,1,0.306046,
+29,COMPLETO,1,0.338311,
+30,COMPLETO,1,0.337523,
+31,COMPLETO,1,0.274988,
+32,COMPLETO,1,0.334884,
+33,COMPLETO,1,0.280989,
+34,COMPLETO,1,0.31675,
+35,COMPLETO,1,0.279984,
+36,COMPLETO,1,0.260755,
+37,COMPLETO,1,0.43564,
+38,COMPLETO,1,0.246974,
+39,EXCECAO,3,0.075007,"Traceback (most recent call last):
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\core\process.py"", line 21, in processar_item
+    dados = executar_automacao(item.payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\run.py"", line 16, in executar_automacao
+    return analyze_ticker(path, ticket, ANO, KE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 190, in analyze_ticker
+    valor_intrinseco = valuation_via_roe(
+                       ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 79, in valuation_via_roe
+    lpa_atual = lpa_series.dropna().iloc[0]
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1153, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1714, in _getitem_axis
+    self._validate_integer(key, axis)
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1647, in _validate_integer
+    raise IndexError(""single positional indexer is out-of-bounds"")
+IndexError: single positional indexer is out-of-bounds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\core\process.py"", line 21, in processar_item
+    dados = executar_automacao(item.payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\run.py"", line 16, in executar_automacao
+    return analyze_ticker(path, ticket, ANO, KE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 190, in analyze_ticker
+    valor_intrinseco = valuation_via_roe(
+                       ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 79, in valuation_via_roe
+    lpa_atual = lpa_series.dropna().iloc[0]
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1153, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1714, in _getitem_axis
+    self._validate_integer(key, axis)
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1647, in _validate_integer
+    raise IndexError(""single positional indexer is out-of-bounds"")
+IndexError: single positional indexer is out-of-bounds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\core\process.py"", line 21, in processar_item
+    dados = executar_automacao(item.payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\run.py"", line 16, in executar_automacao
+    return analyze_ticker(path, ticket, ANO, KE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 190, in analyze_ticker
+    valor_intrinseco = valuation_via_roe(
+                       ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 79, in valuation_via_roe
+    lpa_atual = lpa_series.dropna().iloc[0]
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1153, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1714, in _getitem_axis
+    self._validate_integer(key, axis)
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1647, in _validate_integer
+    raise IndexError(""single positional indexer is out-of-bounds"")
+IndexError: single positional indexer is out-of-bounds
+"
+40,EXCECAO,3,0.011993,"Traceback (most recent call last):
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\core\process.py"", line 21, in processar_item
+    dados = executar_automacao(item.payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\run.py"", line 16, in executar_automacao
+    return analyze_ticker(path, ticket, ANO, KE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 190, in analyze_ticker
+    valor_intrinseco = valuation_via_roe(
+                       ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 79, in valuation_via_roe
+    lpa_atual = lpa_series.dropna().iloc[0]
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1153, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1714, in _getitem_axis
+    self._validate_integer(key, axis)
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1647, in _validate_integer
+    raise IndexError(""single positional indexer is out-of-bounds"")
+IndexError: single positional indexer is out-of-bounds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\core\process.py"", line 21, in processar_item
+    dados = executar_automacao(item.payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\run.py"", line 16, in executar_automacao
+    return analyze_ticker(path, ticket, ANO, KE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 190, in analyze_ticker
+    valor_intrinseco = valuation_via_roe(
+                       ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 79, in valuation_via_roe
+    lpa_atual = lpa_series.dropna().iloc[0]
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1153, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1714, in _getitem_axis
+    self._validate_integer(key, axis)
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1647, in _validate_integer
+    raise IndexError(""single positional indexer is out-of-bounds"")
+IndexError: single positional indexer is out-of-bounds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\core\process.py"", line 21, in processar_item
+    dados = executar_automacao(item.payload)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\run.py"", line 16, in executar_automacao
+    return analyze_ticker(path, ticket, ANO, KE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 190, in analyze_ticker
+    valor_intrinseco = valuation_via_roe(
+                       ^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\OneDrive\Documentos\Valuation\valuationForRoe.py"", line 79, in valuation_via_roe
+    lpa_atual = lpa_series.dropna().iloc[0]
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1153, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1714, in _getitem_axis
+    self._validate_integer(key, axis)
+  File ""C:\Users\edine\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py"", line 1647, in _validate_integer
+    raise IndexError(""single positional indexer is out-of-bounds"")
+IndexError: single positional indexer is out-of-bounds
+"
+41,COMPLETO,1,0.221997,
+42,COMPLETO,1,0.217015,
+43,COMPLETO,1,0.222007,
+44,COMPLETO,1,0.571387,
+45,COMPLETO,1,0.289636,
+46,COMPLETO,1,0.531384,
+47,COMPLETO,1,0.512386,
+48,COMPLETO,1,0.215384,
+49,COMPLETO,1,0.503381,
+50,COMPLETO,1,0.266115,

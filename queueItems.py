@@ -4,6 +4,8 @@ from core.config import FOLDER
 from core.config import TOP_COMPANIES
 import pandas as pd
 
+from typing import List
+
 def carregar_fila():
         
     df = pd.read_csv(f"{CSV_INDEX_PATH}{FOLDER}.csv",

@@ -17,24 +17,20 @@ def main():
     fila = carregar_fila()
 
     # Escolha o modo
-    # resultados = executar_paralelo_thread(fila) # Nada muda
     # resultados = executar_sequencial(fila) # Nada muda
     resultados = executar_paralelo_process(fila) # Nada muda
 
-    df = gerar_dashboard(resultados, plot=False)
+    df = gerar_dashboard(resultados, plot=False) # valuation
     salvar_relatorio(df)
-    
-    # Handbook
-    handbook = gerar_handbook(resultados)
-    # exibir_handbook(handbook)
-    salvar_handbook(handbook)
-    
-        # 3️⃣ Consolida os dados dos itens em um DataFrame
-    df = consolidar_dataframe(resultados)
-
-    # # 4️⃣ Usa o DataFrame
-    # print("\n📊 DATAFRAME FINAL")
+    df = consolidar_dataframe(resultados) # Consolida os dados dos itens em um DataFrame
+    print("\n📊 DATAFRAME FINAL")
     graph(df, True)
+    
+    # # Handbook
+    # handbook = gerar_handbook(resultados)
+    # exibir_handbook(handbook)
+    # salvar_handbook(handbook)
+    
     fim = datetime.now()
     
     duracao = (fim - inicio).total_seconds()

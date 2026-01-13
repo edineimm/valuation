@@ -3,14 +3,9 @@ import pandas as pd
 import yfinance as yf
 from typing import Dict
 from core.config import FOLDER
-
-# =========================
-# CONFIGURAÇÕES DE NEGÓCIO
-# =========================
-MAX_ROE = 0.35
-MAX_GROWTH = 0.25
-MAX_PAYOUT = 0.80
-
+from core.config import MAX_ROE
+from core.config import MAX_GROWTH
+from core.config import MAX_PAYOUT
 
 # =========================
 # UTILIDADES

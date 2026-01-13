@@ -16,6 +16,10 @@ ANO = int(os.getenv("ANO", "1"))
 KE = float(os.getenv("KE", "1.0"))
 TOP_COMPANIES = int(os.getenv("TOP_COMPANIES", "1"))
 
+MAX_ROE = float(os.getenv("MAX_ROE", "1.0"))
+MAX_GROWTH = float(os.getenv("MAX_GROWTH", "1.0"))
+MAX_PAYOUT = float(os.getenv("MAX_PAYOUT", "1.0"))
+
 MAX_RETRY = int(os.getenv("MAX_RETRY", "1"))
 THREAD_WORKERS = int(os.getenv("THREAD_WORKERS", "1"))
 
