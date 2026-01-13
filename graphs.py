@@ -85,6 +85,10 @@ def graph(df, filter=False):
         variacao_indice = variacao_percentual("^BVSP", inicio, fim)
     elif FOLDER == "IDIV":
         variacao_indice = variacao_percentual("DIVD11.SA", inicio, fim)
+    elif FOLDER == "IBRX100":
+        variacao_indice = variacao_percentual("BRAX11.SA", inicio, fim)
+    elif FOLDER == "NASDAQ":
+        variacao_indice = variacao_percentual("^IXIC", inicio, fim)
     else:
         variacao_indice = variacao_percentual("^GSPC", inicio, fim)
     print(f"Desempenho do indice no periodo: {variacao_indice:.2f}%")

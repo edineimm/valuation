@@ -1,11 +1,12 @@
 from core.dataItem import WorkItem
-from core.config import CSV_SP500_PATH
+from core.config import CSV_INDEX_PATH
+from core.config import FOLDER
 from core.config import TOP_COMPANIES
 import pandas as pd
 
 def carregar_fila():
         
-    df = pd.read_csv(CSV_SP500_PATH,
+    df = pd.read_csv(f"{CSV_INDEX_PATH}{FOLDER}.csv",
                     sep=";",
                     decimal = ',',
                     encoding = "utf-8"

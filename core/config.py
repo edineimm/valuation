@@ -6,7 +6,7 @@ load_dotenv()
 
 ENV = os.getenv("ENV", "DEV")
 
-CSV_SP500_PATH = os.getenv("CSV_SP500_PATH")
+CSV_INDEX_PATH = os.getenv("CSV_INDEX_PATH")
 CSV_TICKETS_PATH = os.getenv("CSV_TICKETS_PATH")
 FOLDER = os.getenv("FOLDER")
 

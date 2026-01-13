@@ -154,7 +154,7 @@ def get_price(
         - "end"   → última cotação do ano
     """
     
-    if FOLDER == "IBOV" or FOLDER == "IDIV":
+    if FOLDER == "IBOV" or FOLDER == "IDIV" or FOLDER == "IBRX100":
         ticker_obj = yf.Ticker(f"{ticker}.SA")
     else:
         ticker_obj = yf.Ticker(ticker)
