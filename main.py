@@ -31,11 +31,10 @@ def main():
     
         # 3️⃣ Consolida os dados dos itens em um DataFrame
     df = consolidar_dataframe(resultados)
-    print(df)
 
     # # 4️⃣ Usa o DataFrame
     # print("\n📊 DATAFRAME FINAL")
-    # graph(df, True)
+    graph(df, True)
     fim = datetime.now()
     
     duracao = (fim - inicio).total_seconds()

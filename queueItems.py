@@ -1,5 +1,6 @@
 from core.dataItem import WorkItem
 from core.config import CSV_SP500_PATH
+from core.config import TOP_COMPANIES
 import pandas as pd
 
 def carregar_fila():
@@ -16,7 +17,7 @@ def carregar_fila():
     
     fila = []
     
-    df = df.head(50)
+    df = df[:TOP_COMPANIES]
     
     for idx, ticket in enumerate (df["Código"].tolist(), start=1):
         fila.append(WorkItem(id=idx,

@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 from typing import Dict
+from core.config import FOLDER
 
 # =========================
 # CONFIGURAÇÕES DE NEGÓCIO
@@ -152,7 +153,11 @@ def get_price(
         - "start" → primeira cotação do ano
         - "end"   → última cotação do ano
     """
-    ticker_obj = yf.Ticker(ticker)
+    
+    if FOLDER == "IBOV" or FOLDER == "IDIV":
+        ticker_obj = yf.Ticker(f"{ticker}.SA")
+    else:
+        ticker_obj = yf.Ticker(ticker)
 
     start_date = f"{ano}-01-01"
     end_date = f"{ano}-12-31"
